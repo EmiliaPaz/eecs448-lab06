@@ -7,14 +7,14 @@ List of Bugs:
         - isEmpty returns true for a non empty list after addBack
         - addFront and addBack are working because the tests for size and search after addFront and addBack passed
 
-	2. addBack places the node at the front of the list.
+    2. addBack places the node at the front of the list.
         - addBack works when the list is empty, because the back node is the front node
         - addBack doesn't work when the list is non empty, because it adds the node to the front of the list
 
-	3. removeBack doesn't remove the back node
+    3. removeBack doesn't remove the back node
         - It assumes the list is empty, when it is not, and returns false because it doesn't remove a node
         - size stays the same
 
-    4. removeBack doesn't remove the back node
+    4. removeFront doesn't remove the front node
         - It assumes the list is empty, when it is not, and returns false because it doesn't remove a node
         - size stays the same

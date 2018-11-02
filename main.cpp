@@ -12,22 +12,22 @@
 #include "LinkedListOfInts.h"
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: isEmpty()
+// List: isEmpty()
 // -----------------------------------------------------------------------------
-TEST_CASE("Is empty returns true if the list is empty")
+TEST_CASE("isEmpty returns true if the list is empty")
 {
     LinkedListOfInts testableList;
     REQUIRE( testableList.isEmpty() == true );
 }
 // fails: it returns true when it is non empty
-TEST_CASE("Is empty returns false if the list is not empty after addFront")
+TEST_CASE("isEmpty returns false if the list is not empty after addFront")
 {
     LinkedListOfInts testableList;
     testableList.addFront(000);
     REQUIRE( testableList.isEmpty() == false );
 }
 // fails: it returns true when it is non empty
-TEST_CASE("Is empty returns false if the list is not empty after addBack")
+TEST_CASE("isEmpty returns false if the list is not empty after addBack")
 {
     LinkedListOfInts testableList;
     testableList.addBack(999);
@@ -36,14 +36,14 @@ TEST_CASE("Is empty returns false if the list is not empty after addBack")
 
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: size()
+// List: size()
 // -----------------------------------------------------------------------------
-TEST_CASE("Size of empty list is zero")
+TEST_CASE("size of empty list is zero")
 {
     LinkedListOfInts testableList;
     REQUIRE( testableList.size() == 0 );
 }
-TEST_CASE("Size returns correct value after 1 addFront")
+TEST_CASE("size returns correct value after 1 addFront")
 {
     LinkedListOfInts testableList;
     testableList.addFront(000);
@@ -57,26 +57,26 @@ TEST_CASE("Size returns correct value after 1 addBack:")
 }
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: search()
+// List: search()
 // -----------------------------------------------------------------------------
-TEST_CASE("Search returns false if the value is not in the list")
+TEST_CASE("search returns false if the value is not in the list")
 {
     LinkedListOfInts testableList;
     REQUIRE( testableList.search(123) == false );
 }
-TEST_CASE("Search returns true if the value added with addFront is in the list")
+TEST_CASE("search returns true if the value added with addFront is in the list")
 {
     LinkedListOfInts testableList;
     testableList.addFront(000);
     REQUIRE( testableList.search(000) == true );
 }
-TEST_CASE("Search returns true if the value added with addBack is in the list")
+TEST_CASE("search returns true if the value added with addBack is in the list")
 {
     LinkedListOfInts testableList;
     testableList.addBack(999);
     REQUIRE( testableList.search(999) == true );
 }
-TEST_CASE("Search returns true if the value exists more than 1 time in the list")
+TEST_CASE("search returns true if the value exists more than 1 time in the list")
 {
     LinkedListOfInts testableList;
     testableList.addFront(555);
@@ -89,9 +89,9 @@ TEST_CASE("Search returns true if the value exists more than 1 time in the list"
 
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: addBack()
+// List: addBack()
 // -----------------------------------------------------------------------------
-TEST_CASE("Add back adds value in the correct location in an empty list")
+TEST_CASE("addBack adds value in the correct location in an empty list")
 {
     LinkedListOfInts testableList;
     testableList.addBack(999);
@@ -99,7 +99,7 @@ TEST_CASE("Add back adds value in the correct location in an empty list")
     REQUIRE( list[0] == 999 );
 }
 // Fails: addBack adds to the front
-TEST_CASE("Add back adds value in the correct location in a non empty list")
+TEST_CASE("addBack adds value in the correct location in a non empty list")
 {
     LinkedListOfInts testableList;
     testableList.addFront(222);
@@ -112,7 +112,7 @@ TEST_CASE("Add back adds value in the correct location in a non empty list")
 
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: addFront()
+// List: addFront()
 // -----------------------------------------------------------------------------
 TEST_CASE("addFront adds value in the correct location in an empty list")
 {
@@ -134,7 +134,7 @@ TEST_CASE("addFront adds value in the correct location in a non empty list")
 
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: removeBack()
+// List: removeBack()
 // -----------------------------------------------------------------------------
 TEST_CASE("removeBack does nothing if the list is empty and returns false")
 {
@@ -156,7 +156,7 @@ TEST_CASE("removeBack removes back node from a non empty list and returns true")
 
 
 // -----------------------------------------------------------------------------
-// LinkedListOfInts: removeFront()
+// List: removeFront()
 // -----------------------------------------------------------------------------
 TEST_CASE("removeFront does nothing if the list is empty and returns false")
 {
